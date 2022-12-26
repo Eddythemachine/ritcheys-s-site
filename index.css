@@ -296,6 +296,222 @@ nav button {
   transform: translateY(-1rem);
 }
 
+.services {
+  position: relative;
+}
+
+.services .call-to-action {
+  background: rgba(0, 0, 0, 0.3);
+  /* width: fit-content; */
+  position: fixed;
+  top: 20%;
+  right: 50%;
+  transform: translate(50%, 0%);
+  z-index: 99;
+  display: none;
+}
+
+.services .call-to-action .close-acc {
+  position: absolute;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1rem;
+  background: var(--main-color);
+}
+
+.second-ov {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  /* opacity: 0.4; */
+  width: 100%;
+  height: 100%;
+  z-index: 33;
+  display: none;
+}
+
+/* SERVICES */
+
+.classes {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.voice-trainning h2 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.voice-trainning .class-con {
+  width: 20rem;
+  padding: 3rem;
+  position: relative;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid var(--main-color--dark) 0.2rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.voice-trainning .class-con:hover {
+  transform: translateY(-1rem);
+}
+
+.voice-trainning .class-con img {
+  width: 10rem;
+  position: absolute;
+  left: -3rem;
+  top: 3rem;
+  border: solid black 0.1rem;
+}
+
+.voice-trainning .class-con h3 {
+  font-size: 2.5rem;
+  color: var(--main-color--dark);
+  text-transform: uppercase;
+  flex: 1;
+  margin-top: 15rem;
+}
+
+.voice-trainning .class-con a {
+  text-decoration: none;
+  color: white;
+  background: var(--main-color);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  font-size: 2rem;
+}
+
+.voice-trainning p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.voice-trainning p a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+/* BOOKING */
+
+.booking {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.booking .book {
+  text-align: center;
+  width: 100rem;
+  background: #f64514;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 3rem;
+  cursor: pointer;
+}
+
+.booking .book:hover {
+  box-shadow: 0 0.5rem 1rem black;
+}
+
+.booking .book h3 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  text-align: start;
+  margin-top: 1rem;
+}
+
+.booking .book p {
+  font-size: 3rem;
+  text-align: end;
+}
+
+.booking .book a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  text-align: end;
+}
+
+.contact {
+  border-top: 0.2rem solid var(--color-black);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--main-color);
+  padding: 3rem;
+}
+
+/* FOOTER */
+
+.contact .logo {
+  display: flex;
+  align-items: center;
+}
+
+.contact .logo img {
+  width: 5rem;
+}
+
+.contact .logo p {
+  font-size: 2rem;
+}
+
+.social-footer .medi img {
+  width: 3rem;
+}
+
+.social-footer .medi a {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 0;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.contact-footer .medi a {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 0;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.contact-footer .medi p {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+.social-footer .medi p {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+.contact-footer .medi img {
+  width: 3rem;
+  height: 2rem;
+}
+
+.contact-details {
+  margin-top: 10rem;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 /* ///////////////////////////////////////////////MEDIA//////////////////////////////// */
 
 @media (max-width: 1200px) {
@@ -466,6 +682,11 @@ nav button {
     top: 15rem;
     border-radius: 1rem;
     border: none;
+  }
+
+  .about-me-main h3 {
+    width: 26rem;
+    font-size: 4rem;
   }
 
   /* ABOUT ME SECTION */
