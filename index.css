@@ -92,16 +92,26 @@ nav button {
   font-family: "Passion One";
   display: block;
   color: var(--main-color);
-  animation: movein 3s;
   margin-bottom: 0;
+}
+
+.tst {
+  opacity: 1;
+  animation: movein 1s;
 }
 
 @keyframes movein {
   0% {
-    transform: translateX(-200rem);
+    transform: translateY(30rem);
+    opacity: 0;
+  }
+  80% {
+    /* transform: translateY(200rem); */
+    opacity: 1;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -128,17 +138,7 @@ nav button {
   position: relative;
   z-index: 4;
   transition: all 0.3s linear;
-  animation: infinite moveUpandDown 3s;
   box-shadow: 0.5rem 0.5rem 0rem var(--main-color-light);
-}
-
-@keyframes moveUpandDown {
-  0% {
-    transform: translateY(-0.1rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .intro button:hover {
@@ -190,7 +190,7 @@ nav button {
 
 .about-me {
   padding: 5rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -216,12 +216,13 @@ nav button {
 }
 
 .socials-platform {
-  margin-top: 15rem;
+  margin-top: 5rem;
 }
 
 .socials-platform h3 {
   font-size: 4rem;
-  color: var(--color-white);
+  color: var(--main-color);
+  margin-bottom: 5rem;
 }
 
 .error {
@@ -236,7 +237,6 @@ nav button {
   padding: 3rem;
   position: relative;
   border-radius: 1rem;
-  margin-top: 10rem;
   transition: ease-in-out 0.3s;
   cursor: pointer;
 }
@@ -300,8 +300,29 @@ nav button {
 
 @media (max-width: 1200px) {
   .home-main {
-    padding: 16rem 9rem;
+    padding: 4rem 9rem;
     gap: 10rem;
+  }
+
+  .socials-platform {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .socials-platform {
+    margin-top: 2rem;
+  }
+
+  .socials-container {
+    width: 15rem;
+  }
+
+  .social-main h3 {
+    margin-top: 5rem;
+  }
+  .error {
+    justify-content: center;
   }
 }
 
@@ -311,6 +332,7 @@ nav button {
   }
 
   .home-main {
+    padding: 18rem 9rem;
     flex-direction: column;
     gap: 4rem;
     justify-content: center;
@@ -401,6 +423,29 @@ nav button {
   }
 }
 
+@media (max-width: 720px) {
+  .error {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .socials-platform {
+    margin-top: 2rem;
+  }
+
+  .socials-container {
+    width: 15rem;
+  }
+
+  .social-main img {
+    width: 8rem;
+  }
+
+  .social-main h3 {
+    margin-top: 4rem;
+  }
+}
+
 @media (max-width: 550px) {
   html {
     font-size: 44.5%;
@@ -422,6 +467,59 @@ nav button {
     border-radius: 1rem;
     border: none;
   }
+
+  /* ABOUT ME SECTION */
+
+  .socials-platform {
+    margin-top: 0rem;
+  }
+
+  .error {
+    justify-content: center;
+  }
 }
-/* @media (max-width: 843px) {
-} */
+
+@media (max-width: 340px) {
+  .intro h1 {
+    font-size: 4rem;
+    margin-top: 0;
+  }
+
+  .about-me-main h3 {
+    width: 30rem;
+    font-size: 3rem;
+  }
+
+  .social-main h3 {
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+
+  .socials-platform {
+    margin-top: 0;
+  }
+
+  .socials-container {
+    width: 10rem;
+  }
+
+  .socials-container img {
+    width: 7rem;
+  }
+
+  .error {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .social-main a {
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-me {
+    padding: 2rem;
+  }
+}
