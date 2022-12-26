@@ -25,29 +25,32 @@ flyin.forEach((mov) => {
   observer.observe(mov);
 });
 
-// const opt2 = {
-//   // root: document.querySelector(".home"),
-//   root: null,
-//   rootMargin: "0px",
-//   threshold: 0,
-// };
+// NAVBAR STICKY
 
-// const call2 = (entries, observer) => {
-//   entries.forEach((mov) => {
-//     if (!mov.isIntersecting) {
-//       flyin.forEach((mov) => {
+const navbar = document.querySelector(".navbar");
+const sectionOne = document.querySelector(".home-main");
 
-//       });
-//     } else {
-//       flyin.forEach((mov) => {
+const navOp = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.1,
+};
 
-//       });
-//     }
-//   });
-// };
+const callNav = (entries, observer) => {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    navbar.classList.add("sticky-nav");
+  } else {
+    navbar.classList.remove("sticky-nav");
+  }
+};
 
-// const hideObjs = new IntersectionObserver(call2, opt2);
+const observeNav = new IntersectionObserver(callNav, navOp);
 
-// page.forEach((mov) => {
-//   hideObjs.observe(mov);
-// });
+observeNav.observe(sectionOne);
+
+document.querySelector(".about-me").addEventListener("click", () => {
+  document.querySelector("#tab-2").scrollIntoView({
+    behavior: "smooth",
+  });
+});

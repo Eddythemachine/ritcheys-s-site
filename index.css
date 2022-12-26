@@ -52,6 +52,17 @@ nav button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s linear;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: solid var(--main-color) 0.1rem;
+  z-index: 9999;
+  background: var(--color-white);
 }
 
 .nav .link {
@@ -579,23 +590,24 @@ nav button {
     right: 0;
     z-index: 99;
     padding: 10rem;
-    transition: 0.3s linear;
+    transition: 0.8s linear;
   }
 
   .close-nav-bar {
     display: block;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
     border-radius: 5rem;
     font-size: 3rem;
     border: none;
-    width: 10rem;
+    width: 7rem;
     color: var(--color-white);
     background: var(--main-color--dark);
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   .nav .link {
@@ -742,5 +754,16 @@ nav button {
 @media (max-width: 320px) {
   .about-me {
     padding: 2rem;
+  }
+
+  .contact-details {
+    margin-top: 2rem;
+    justify-content: start;
+    gap: 1rem;
+    padding: 0 3rem;
+  }
+
+  .voice-trainning p {
+    padding: 0 3rem;
   }
 }

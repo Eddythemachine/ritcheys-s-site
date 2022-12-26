@@ -21,16 +21,19 @@ const toggleNavBar = function () {
 const navEl = function (event) {
   event.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(e.target.classList);
-    console.log(
+    if (
       e.target.classList.contains("link") ||
-        e.target.classList.contains("close-nav-bar")
-    );
-    if (e.target.classList.contains("link")) {
+      e.target.classList.contains("close-nav-bar")
+    ) {
       toggleNavBar();
-    } else if (e.target.classList.contains("close-nav-bar")) {
-      closeNavBar();
-    } else {
+      if (e.target.dataset.tabNo) {
+        const tabno = document.querySelector(`#tab-${e.target.dataset.tabNo}`);
+        tabno.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    } else if (e.target.classList.contains("menu")) toggleNavBar();
+    else if (e.target.classList.contains("overlay")) {
       toggleNavBar();
     }
   });
@@ -38,5 +41,5 @@ const navEl = function (event) {
 
 navEl(nav);
 navEl(menu);
-navEl(closeNavBar);
+// navEl(closeNavBar);
 navEl(overlay);
